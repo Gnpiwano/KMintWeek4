@@ -12,109 +12,79 @@
     <Filter Include="Week1">
       <UniqueIdentifier>{6469432c-2a1e-411f-a745-f6b8fe556dad}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\FrameWork">
-      <UniqueIdentifier>{34f831a1-d991-4349-a1df-8b23479064f3}</UniqueIdentifier>
+    <Filter Include="Source Files\Steering">
+      <UniqueIdentifier>{662b1032-ea03-45fa-8490-2cd94323107c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\FrameWork">
-      <UniqueIdentifier>{50ad01b3-d3aa-4ecf-bf59-82e1195034e8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Model">
-      <UniqueIdentifier>{e8dd6e00-989a-4909-9ae4-9429b3538d05}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Controller">
-      <UniqueIdentifier>{b8b8ffcf-48e2-4a67-9980-7b2fbd761a3a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\View">
-      <UniqueIdentifier>{21fd4d5e-b159-495d-8d97-872200b1ea37}</UniqueIdentifier>
+    <Filter Include="Source Files\Entity">
+      <UniqueIdentifier>{06ed82af-c2bb-40fe-ba0e-908a62f38146}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\Model">
-      <UniqueIdentifier>{03d56df0-b6bf-4323-a75e-fcddf7a389ed}</UniqueIdentifier>
+      <UniqueIdentifier>{ce8429db-1a5a-48f6-877e-fe7f0d53bf39}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\Controller">
-      <UniqueIdentifier>{41cd6169-e6cb-49e0-8dde-12bff6bfd1a9}</UniqueIdentifier>
+      <UniqueIdentifier>{fd75524c-5148-43b0-99f2-a70ffadfe59d}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\View">
-      <UniqueIdentifier>{d1d1267b-4ca8-452f-8df0-97eaa0b69735}</UniqueIdentifier>
+      <UniqueIdentifier>{7341fe2d-78fd-4322-8ab1-ce3968b1afce}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Model\Units">
-      <UniqueIdentifier>{5b4755da-d325-40fc-865f-44b3a457ba17}</UniqueIdentifier>
+    <Filter Include="Header Files\Model\Steering">
+      <UniqueIdentifier>{19a3a84b-e738-4859-a750-f7d06fe551c8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Model\Units">
-      <UniqueIdentifier>{65a129d4-198f-4350-9700-f3b3b92f07ab}</UniqueIdentifier>
+    <Filter Include="Header Files\Model\FrameWork">
+      <UniqueIdentifier>{50ad01b3-d3aa-4ecf-bf59-82e1195034e8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Model\Units\Base">
-      <UniqueIdentifier>{a94b1a86-1aec-4e7b-9c3d-5ac943811e58}</UniqueIdentifier>
+    <Filter Include="Header Files\Model\Entity">
+      <UniqueIdentifier>{56662c6f-85d1-41e9-b56a-8b34f9577b85}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Model\Units\Base">
-      <UniqueIdentifier>{653e7509-5a01-45a3-a24c-fc86de95f949}</UniqueIdentifier>
+    <Filter Include="Header Files\Model\view">
+      <UniqueIdentifier>{41f54ab6-858f-4b0b-8c56-10ef9bd0098a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Model\SteeringBehaviours">
-      <UniqueIdentifier>{589f5c5b-49d9-43e2-99fa-ae3c3b66f143}</UniqueIdentifier>
+    <Filter Include="Source Files\View">
+      <UniqueIdentifier>{dacaa1a8-dbc7-4342-bf33-c4b0b869e82a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Model\SteeringBehaviours">
-      <UniqueIdentifier>{8de23b12-1fc3-4f32-9ba5-7a83df9e786f}</UniqueIdentifier>
+    <Filter Include="Source Files\Controller">
+      <UniqueIdentifier>{ecfe6b5b-a4c6-4793-bd25-d2042bd63aa7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Model\SteeringBehaviours\MoveBehaviours">
-      <UniqueIdentifier>{421dc6af-4083-4192-8aec-092bded28f82}</UniqueIdentifier>
+    <Filter Include="Source Files\Model">
+      <UniqueIdentifier>{a79abee8-315d-4a98-b3dd-ad9fc2dd477a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Model\SteeringBehaviours\MoveBehaviours">
-      <UniqueIdentifier>{47a78330-63b3-478b-909d-b0859a33a5b6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Model\Vector">
-      <UniqueIdentifier>{d56b7c18-2994-49b6-af51-a2e9e669519f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Model\Vector">
-      <UniqueIdentifier>{4781e6cb-a830-4dde-a2fc-cef8766cc546}</UniqueIdentifier>
+    <Filter Include="Source Files\Model\Framework">
+      <UniqueIdentifier>{f330d52f-2a72-40f2-839c-13e042f2e102}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="SteeringBehaviours.cpp">
+      <Filter>Source Files\Steering</Filter>
+    </ClCompile>
+    <ClCompile Include="CowEntity.cpp">
+      <Filter>Source Files\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="MovingEntity.cpp">
+      <Filter>Source Files\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="RabbitEntity.cpp">
+      <Filter>Source Files\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="C2DMatrix.cpp">
+      <Filter>Source Files\Model</Filter>
+    </ClCompile>
     <ClCompile Include="FWApplication.cpp">
-      <Filter>Source Files\FrameWork</Filter>
+      <Filter>Source Files\Model\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="IGameObject.cpp">
+      <Filter>Source Files\Model\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="GameWorld.cpp">
+      <Filter>Source Files\Model</Filter>
     </ClCompile>
     <ClCompile Include="Main.cpp">
       <Filter>Source Files\Controller</Filter>
     </ClCompile>
-    <ClCompile Include="Cow.cpp">
-      <Filter>Source Files\Model\Units</Filter>
-    </ClCompile>
-    <ClCompile Include="BaseGameEntity.cpp">
-      <Filter>Source Files\Model\Units\Base</Filter>
-    </ClCompile>
-    <ClCompile Include="MovingEntity.cpp">
-      <Filter>Source Files\Model\Units\Base</Filter>
-    </ClCompile>
-    <ClCompile Include="Context.cpp">
+    <ClCompile Include="context.cpp">
       <Filter>Source Files\Controller</Filter>
     </ClCompile>
-    <ClCompile Include="GameWorld.cpp">
-      <Filter>Source Files\Controller</Filter>
-    </ClCompile>
-    <ClCompile Include="DrawScreen.cpp">
-      <Filter>Source Files\View</Filter>
-    </ClCompile>
-    <ClCompile Include="Vector.cpp">
-      <Filter>Source Files\Model\Vector</Filter>
-    </ClCompile>
-    <ClCompile Include="BaseVector.cpp">
-      <Filter>Source Files\Model\Vector</Filter>
-    </ClCompile>
-    <ClCompile Include="Rabbit.cpp">
-      <Filter>Source Files\Model\Units</Filter>
-    </ClCompile>
-    <ClCompile Include="Unit.cpp">
-      <Filter>Source Files\Model\Units\Base</Filter>
-    </ClCompile>
-    <ClCompile Include="SeekBehaviour.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="FleeBehaviour.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ArriveBehaviour.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SteeringBehaviour.cpp">
-      <Filter>Source Files\Model\SteeringBehaviours</Filter>
+    <ClCompile Include="Transformations.cpp">
+      <Filter>Source Files\Model</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -122,55 +92,43 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Config.h">
-      <Filter>Header Files\FrameWork</Filter>
+      <Filter>Header Files\Model\FrameWork</Filter>
     </ClInclude>
     <ClInclude Include="FWApplication.h">
-      <Filter>Header Files\FrameWork</Filter>
+      <Filter>Header Files\Model\FrameWork</Filter>
     </ClInclude>
-    <ClInclude Include="IGameObject.h">
-      <Filter>Header Files\FrameWork</Filter>
+    <ClInclude Include="CowEntity.h">
+      <Filter>Header Files\Model\Entity</Filter>
     </ClInclude>
-    <ClInclude Include="Cow.h">
-      <Filter>Header Files\Model\Units</Filter>
+    <ClInclude Include="RabbitEntity.h">
+      <Filter>Header Files\Model\Entity</Filter>
     </ClInclude>
-    <ClInclude Include="BaseGameEntity.h">
-      <Filter>Header Files\Model\Units\Base</Filter>
+    <ClInclude Include="SteeringBehaviours.h">
+      <Filter>Header Files\Model\Steering</Filter>
     </ClInclude>
-    <ClInclude Include="MovingEntity.h">
-      <Filter>Header Files\Model\Units\Base</Filter>
+    <ClInclude Include="MovingEntity.hpp">
+      <Filter>Header Files\Model\Entity</Filter>
     </ClInclude>
-    <ClInclude Include="Context.h">
-      <Filter>Header Files\Controller</Filter>
+    <ClInclude Include="C2DMatrix.h">
+      <Filter>Header Files\Model\view</Filter>
     </ClInclude>
     <ClInclude Include="GameWorld.h">
+      <Filter>Header Files\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="IGameObject.h">
+      <Filter>Header Files\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.h">
       <Filter>Header Files\Controller</Filter>
     </ClInclude>
-    <ClInclude Include="DrawScreen.h">
-      <Filter>Header Files\View</Filter>
+    <ClInclude Include="Vector2D.h">
+      <Filter>Header Files\Model</Filter>
     </ClInclude>
-    <ClInclude Include="Unit.h">
-      <Filter>Header Files\Model\Units\Base</Filter>
+    <ClInclude Include="Transformations.h">
+      <Filter>Header Files\Model</Filter>
     </ClInclude>
-    <ClInclude Include="BaseVector.h">
-      <Filter>Header Files\Model\Vector</Filter>
-    </ClInclude>
-    <ClInclude Include="Vector.h">
-      <Filter>Header Files\Model\Vector</Filter>
-    </ClInclude>
-    <ClInclude Include="Rabbit.h">
-      <Filter>Header Files\Model\Units</Filter>
-    </ClInclude>
-    <ClInclude Include="ArriveBehaviour.h">
-      <Filter>Header Files\Model\SteeringBehaviours\MoveBehaviours</Filter>
-    </ClInclude>
-    <ClInclude Include="FleeBehaviour.h">
-      <Filter>Header Files\Model\SteeringBehaviours\MoveBehaviours</Filter>
-    </ClInclude>
-    <ClInclude Include="SeekBehaviour.h">
-      <Filter>Header Files\Model\SteeringBehaviours\MoveBehaviours</Filter>
-    </ClInclude>
-    <ClInclude Include="SteeringBehaviour.h">
-      <Filter>Header Files\Model\SteeringBehaviours</Filter>
+    <ClInclude Include="context.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

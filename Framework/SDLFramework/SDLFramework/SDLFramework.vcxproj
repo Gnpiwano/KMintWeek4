@@ -84,44 +84,35 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ArriveBehaviour.cpp" />
-    <ClCompile Include="BaseGameEntity.cpp" />
-    <ClCompile Include="BaseVector.cpp" />
-    <ClCompile Include="Context.cpp" />
-    <ClCompile Include="Cow.cpp" />
-    <ClCompile Include="DrawScreen.cpp" />
-    <ClCompile Include="FleeBehaviour.cpp" />
+    <ClCompile Include="C2DMatrix.cpp" />
+    <ClCompile Include="context.cpp" />
+    <ClCompile Include="CowEntity.cpp" />
     <ClCompile Include="FWApplication.cpp" />
     <ClCompile Include="GameWorld.cpp" />
+    <ClCompile Include="IGameObject.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MovingEntity.cpp" />
-    <ClCompile Include="Rabbit.cpp" />
-    <ClCompile Include="SeekBehaviour.cpp" />
-    <ClCompile Include="SteeringBehaviour.cpp" />
-    <ClCompile Include="Unit.cpp" />
-    <ClCompile Include="Vector.cpp" />
+    <ClCompile Include="RabbitEntity.cpp" />
+    <ClCompile Include="SteeringBehaviours.cpp" />
+    <ClCompile Include="Transformations.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="SDL2.dll" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ArriveBehaviour.h" />
-    <ClInclude Include="BaseGameEntity.h" />
-    <ClInclude Include="BaseVector.h" />
+    <ClInclude Include="C2DMatrix.h" />
     <ClInclude Include="Config.h" />
-    <ClInclude Include="Context.h" />
-    <ClInclude Include="Cow.h" />
-    <ClInclude Include="DrawScreen.h" />
-    <ClInclude Include="FleeBehaviour.h" />
+    <ClInclude Include="context.h" />
+    <ClInclude Include="CowEntity.h" />
     <ClInclude Include="FWApplication.h" />
     <ClInclude Include="GameWorld.h" />
     <ClInclude Include="IGameObject.h" />
-    <ClInclude Include="MovingEntity.h" />
-    <ClInclude Include="Rabbit.h" />
-    <ClInclude Include="SeekBehaviour.h" />
-    <ClInclude Include="SteeringBehaviour.h" />
-    <ClInclude Include="Unit.h" />
-    <ClInclude Include="Vector.h" />
+    <ClInclude Include="MovingEntity.hpp" />
+    <ClInclude Include="RabbitEntity.h" />
+    <ClInclude Include="SteeringBehaviours.h" />
+    <ClInclude Include="Transformations.h" />
+    <ClInclude Include="Utils.h" />
+    <ClInclude Include="Vector2D.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

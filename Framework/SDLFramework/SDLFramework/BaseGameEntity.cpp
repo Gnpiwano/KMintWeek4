@@ -1,5 +1,5 @@
 #include "BaseGameEntity.h"
-
+#include "FWApplication.h"
 
 
 BaseGameEntity::BaseGameEntity()

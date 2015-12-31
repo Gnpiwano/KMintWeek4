@@ -1,6 +1,7 @@
 #pragma once
 #include "FWApplication.h"
-#include <SDL_rect.h>
+#include <math.h>
+#include "SDL_rect.h"
 
 
 class IGameObject
@@ -40,7 +41,7 @@ public:
 	///
 	/// <param name="collidedObject">	[in,out] If non-null, the collided object. </param>
 	////////////////////////////////////////////////////////////////////////////////////////////////////
-	virtual void OnCollision(IGameObject * collidedObject){ }
+	virtual void OnCollision(IGameObject * collidedObject) { }
 
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -98,17 +99,17 @@ public:
 	////************************************
 	//// Method:    SetColor
 	//// FullName:  IGameObject::SetColor
-	//// Access:    virtual public 
+	//// Access:    virtual public
 	//// Returns:   void
 	//// Qualifier:
 	//// Parameter: const Color & color
-	//// Description: 
+	//// Description:
 	////************************************
 	//virtual void SetColor(const Color & color) { this->mColor = color; }
 	////************************************
 	//// Method:    GetColor
 	//// FullName:  IGameObject::GetColor
-	//// Access:    virtual public 
+	//// Access:    virtual public
 	//// Returns:   Color
 	//// Qualifier: const
 	////************************************
@@ -202,12 +203,12 @@ public:
 		return true;
 	}
 
-	virtual void SetActive(bool isActive) { mIsActive = isActive;  };
+	virtual void SetActive(bool isActive) { mIsActive = isActive; };
 
 protected:
 	FWApplication * mApplication;
 	SDL_Texture * mTexture;
-	
+
 	uint32_t mX, mY;
 	uint32_t mWidth, mHeight;
 	bool mIsActive;

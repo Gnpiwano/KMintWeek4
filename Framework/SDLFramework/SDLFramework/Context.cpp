@@ -9,13 +9,16 @@
 #include "Cow.h"
 #include "Rabbit.h"
 #include "Vector.h"
+#include "RabbitEntity.h"
+#include "SteeringBehaviours.h"
 
 Context::Context()
 {
-	gameWorld = { new GameWorld() };
-	drawScreen = { new DrawScreen(this, gameWorld) };
 	application = { new FWApplication() };
+	gameWorld = { new GameWorld() };
+	//drawScreen = { new DrawScreen(this, gameWorld) };
 
+	rabbit = new RabbitEntity(gameWorld);
 	// Context loaded start Application for this situation. 
 	startApplication();
 }
@@ -36,6 +39,13 @@ int Context::startApplication()
 
 	application->SetTargetFPS(60);
 	application->SetColor(Color(180, 180, 180, 255));
+
+	CowEntity* cow = new  CowEntity(gameWorld);
+
+	rabbit->SetTarget(cow);
+	rabbit->setStateid(3);
+	rabbit->setSteering(new SteeringBehaviors{ rabbit });
+	application->AddRenderable(rabbit);
 
 	//while (true){}
 	while (application->IsRunning())
@@ -59,21 +69,34 @@ int Context::startApplication()
 			case SDL_MOUSEBUTTONDOWN:
 				if (event.button.button == SDL_BUTTON_LEFT) {
 					
-					Unit* cow{ new Cow(new Vector(event.motion.x, event.motion.y), new Vector(event.motion.x, event.motion.y), 20, 20, gameWorld) };
+					CowEntity* cow = new  CowEntity(gameWorld);
+					cow->setPosition(Vector2D(event.motion.x, event.motion.y));
 				}
 				else if (event.button.button == SDL_BUTTON_RIGHT) {
-					
-					Unit* rabbit{ new Rabbit(new Vector(event.motion.x, event.motion.y), new Vector(event.motion.x, event.motion.y), 20, 20, gameWorld) };
+					rabbit->setPosition(Vector2D(event.motion.x, event.motion.y));
+					//Unit* rabbit{ new Rabbit(new Vector(event.motion.x, event.motion.y), new Vector(event.motion.x, event.motion.y), 20, 20, gameWorld) };
 				}
 				break;
 			}
 		}
 
+		application->UpdateGameObjects();
+		application->RenderGameObjects();
 		//Method for drawing everything. 
-		drawScreen->Draw(application);
-		gameWorld->update(0.017f);
+		//drawScreen->Draw(application);
+		//gameWorld->update(0.017f);
 		application->EndTick();
 	}
 
 	return EXIT_SUCCESS;
+}
+
+
+context::context()
+{
+}
+
+
+context::~context()
+{
 }

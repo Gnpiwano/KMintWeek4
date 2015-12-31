@@ -1,15 +1,16 @@
 #pragma once
-#include "MovingEntity.h"
+#include "MovingEntity.hpp"
 
 class GameWorld;
 class SteeringBehaviour;
+
 class Unit : public MovingEntity
 {
 public:
 	Unit();
 	~Unit();
 
-	virtual void update(float time_elapsed);
+	virtual void update(float time_elapsed) {};
 
 protected:
 	SteeringBehaviour* steeringBehaviour;

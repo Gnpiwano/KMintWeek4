@@ -1,17 +1,21 @@
 #pragma once
+#include <stdio.h>
+#include "MovingEntity.hpp"
+#include "CowEntity.h"
 #include <vector>
-#include "Unit.h"
-class GameWorld
-{
+
+class GameWorld {
+
+private:
+	std::vector<CowEntity*> cowList;
+	MovingEntity* rabbit;
 public:
 	GameWorld();
 	~GameWorld();
-
-	void update(double time_elapsed);
-	void addUnit(Unit* entity) { entitys.push_back(entity); };
-	std::vector<Unit*> getUnits() { return entitys; };
-
-private:
-	std::vector<Unit*> entitys;
+	std::vector<CowEntity*> getCowList() { return this->cowList; };
+	void UpdateEntity(MovingEntity* entity);
+	void setCowList(std::vector<CowEntity*> cowList) { this->cowList = cowList; };
+	void addCowToCowList(CowEntity* cow) { this->cowList.push_back(cow); };
+	void setRabbit(MovingEntity* rabbit) { this->rabbit = rabbit; }
+	MovingEntity* getRabbit() { return rabbit; }
 };
-

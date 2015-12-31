@@ -1,5 +1,6 @@
 #pragma once
 #include "Vector.h"
+class FWApplication;
 class BaseGameEntity
 {
 public:
@@ -17,5 +18,6 @@ public:
 
 protected:
 	Vector* Position;
+	FWApplication* mApplication;
 };
 
