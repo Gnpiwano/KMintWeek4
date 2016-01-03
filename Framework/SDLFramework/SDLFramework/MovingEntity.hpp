@@ -34,7 +34,6 @@ public:
 	const double PanicDistanceSq = 100.0 * 100.0;
 	const double safeDistanceSq = 250.0 * 200.0;
 
-
 	virtual void Update(float deltatime);
 	void Draw();
 
@@ -65,7 +64,6 @@ public:
 	MovingEntity* getClosestTarget();
 	double TimeElapsed()const { return m_dTimeElapsed; }
 	GameWorld* getWorld() { return this->gameWorld; }
-
 
 	void TagNeighbors(double radius);
 	void Tag() { this->isTagged = true; }

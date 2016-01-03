@@ -12,7 +12,6 @@ public:
 	Vector2D() {};
 	~Vector2D() {};
 
-
 	float x;
 	float y;
 
@@ -48,7 +47,6 @@ public:
 		return vect;
 	}
 
-
 	Vector2D operator /(int f) const
 	{
 		Vector2D vect;
@@ -58,8 +56,6 @@ public:
 		return vect;
 	}
 
-
-
 	Vector2D operator /(double f) const
 	{
 		Vector2D vect;
@@ -68,7 +64,6 @@ public:
 
 		return vect;
 	}
-
 
 	Vector2D operator *(double f) const
 	{
@@ -107,9 +102,6 @@ public:
 		return result;
 	}
 
-
-
-
 	const Vector2D& operator*=(const double& rhs)
 	{
 		x *= rhs;
@@ -117,7 +109,6 @@ public:
 
 		return *this;
 	}
-
 
 	Vector2D& operator*=(const Vector2D& vector)
 	{
@@ -127,7 +118,6 @@ public:
 		return *this;
 	}
 
-
 	Vector2D operator +(const Vector2D& vector) const
 	{
 		Vector2D vec;
@@ -135,6 +125,7 @@ public:
 		vec.y = y + vector.y;
 		return vec;
 	}
+
 	Vector2D operator - (const Vector2D& vector) const
 	{
 		Vector2D vec;
@@ -143,15 +134,12 @@ public:
 		return vec;
 	}
 
-
-
-
 	inline double Length() const
 	{
 		return sqrt(x*x + y*y);
 	}
 
-	inline double LenghtSq() const
+	inline double LengthSq() const
 	{
 		return (x*x + y*y);
 	}
@@ -162,7 +150,6 @@ public:
 		double xSeperation = vector.x - x;
 		return sqrt(ySeperation * ySeperation + xSeperation * xSeperation);
 	}
-
 
 	inline double DistanceSq(const Vector2D& vector)const
 	{
@@ -181,7 +168,6 @@ public:
 			this->y /= vector_lenght;
 		}
 	}
-
 
 	inline Vector2D Perp()const
 	{
@@ -211,11 +197,6 @@ public:
 		return x*v2.x + y*v2.y;
 	}
 
-	inline double LengthSq()const
-	{
-		return (x * x + y * y);
-	}
-
 	void print()
 	{
 		std::cout << "vector x: " << x << " vector y: " << y << std::endl;
@@ -235,5 +216,3 @@ inline Vector2D NormalizeVector(const Vector2D &vec)
 
 	return vector;
 }
-
-

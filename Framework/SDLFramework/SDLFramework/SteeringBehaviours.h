@@ -9,17 +9,11 @@ class SteeringBehaviors
 private:
 	MovingEntity* owner;
 
-
-
-	//the current position on the wander circle the agent is
-	//attempting to steer towards
 	Vector2D     m_vWanderTarget;
 
-	//explained above
 	double        m_dWanderJitter;
 	double        m_dWanderRadius;
 	double        m_dWanderDistance;
-
 
 public:
 	SteeringBehaviors(MovingEntity* owner) {
@@ -29,14 +23,10 @@ public:
 		m_dWanderJitter = 360;
 		m_dWanderRadius = 360;
 
-
 		double theta = RandFloat() * (2 * 3.14);
 
-		//create a vector to a target position on the wander circle
 		m_vWanderTarget = Vector2D(m_dWanderRadius * cos(theta),
 			m_dWanderRadius * sin(theta));
-
-
 	}
 
 	Vector2D Calculate();
@@ -45,10 +35,6 @@ public:
 	Vector2D Pursuit();
 	Vector2D Flee();
 	Vector2D Wander();
-	//Vector2D NotCollide();
-	//Vector2D KeepClose();
-	//Vector2D Separation();
-	//Vector2D Cohesion();
 	bool EntityIsInSpace();
 };
 

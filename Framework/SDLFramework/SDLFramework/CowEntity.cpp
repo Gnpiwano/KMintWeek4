@@ -4,11 +4,9 @@
 #include <random>
 CowEntity::CowEntity(GameWorld* world) :MovingEntity(world)
 {
-
 	srand(time(NULL));
 
 	int cow = world->getCowList().size() + 1;
-
 
 	std::string location = "";
 	
@@ -25,7 +23,6 @@ CowEntity::CowEntity(GameWorld* world) :MovingEntity(world)
 	this->SetTarget(world->getRabbit());
 }
 
-
 CowEntity::~CowEntity()
 {
 }
@@ -34,4 +31,3 @@ void CowEntity::Update(float deltaTime)
 {
 	MovingEntity::Update(deltaTime);
 }
-

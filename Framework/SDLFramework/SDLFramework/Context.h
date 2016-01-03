@@ -10,7 +10,6 @@ public:
 	~Context();
 
 	GameWorld* gameWorld;
-	//DrawScreen* drawScreen;
 
 	int startApplication();
 

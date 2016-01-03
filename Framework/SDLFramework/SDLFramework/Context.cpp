@@ -16,13 +16,10 @@ Context::Context()
 {
 	application = { new FWApplication() };
 	gameWorld = { new GameWorld() };
-	//drawScreen = { new DrawScreen(this, gameWorld) };
 
 	rabbit = new RabbitEntity(gameWorld);
-	// Context loaded start Application for this situation. 
 	startApplication();
 }
-
 
 Context::~Context()
 {
@@ -30,7 +27,6 @@ Context::~Context()
 
 int Context::startApplication()
 {
-	//auto window = Window::CreateSDLWindow();
 	if (!application->GetWindow())
 	{
 		LOG("Couldn't create window...");
@@ -47,7 +43,6 @@ int Context::startApplication()
 	rabbit->setSteering(new SteeringBehaviors{ rabbit });
 	application->AddRenderable(rabbit);
 
-	//while (true){}
 	while (application->IsRunning())
 	{
 		application->StartTick();
@@ -74,7 +69,6 @@ int Context::startApplication()
 				}
 				else if (event.button.button == SDL_BUTTON_RIGHT) {
 					rabbit->setPosition(Vector2D(event.motion.x, event.motion.y));
-					//Unit* rabbit{ new Rabbit(new Vector(event.motion.x, event.motion.y), new Vector(event.motion.x, event.motion.y), 20, 20, gameWorld) };
 				}
 				break;
 			}
@@ -82,15 +76,11 @@ int Context::startApplication()
 
 		application->UpdateGameObjects();
 		application->RenderGameObjects();
-		//Method for drawing everything. 
-		//drawScreen->Draw(application);
-		//gameWorld->update(0.017f);
 		application->EndTick();
 	}
 
 	return EXIT_SUCCESS;
 }
-
 
 context::context()
 {
